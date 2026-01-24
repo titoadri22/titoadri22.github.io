@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de Adrian Revert Escutia - Desarrollador Web | Estudiante de DAM especializado en HTML, CSS y JavaScript">
+    <meta name="keywords" content="desarrollador web, portfolio, HTML, CSS, JavaScript, DAM">
+    <meta name="author" content="Adrian Revert Escutia">
+    <title>Adrian Revert | Desarrollador Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">AR</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+                        <!-- Sun Icon -->
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <!-- Moon Icon -->
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting fade-in">Hola, soy</p>
+                <h1 class="hero-title fade-in-delay-1">Adrian Revert</h1>
+                <h2 class="hero-subtitle fade-in-delay-2">Desarrollador Web</h2>
+                <p class="hero-description fade-in-delay-3">
+                    Estudiante de 2º DAM apasionado por crear experiencias web excepcionales.
+                    Transformo ideas en realidad digital.
+                </p>
+                <div class="hero-cta fade-in-delay-4">
+                    <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#" class="btn btn-outline" download
+                        onclick="alert('¡El CV estará disponible muy pronto! Adrian lo está puliendo ✨')">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Descargar CV
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in-delay-2">
+                <div class="floating-card">
+                    <div class="code-header">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <div class="code-content">
+                        <span class="code-line"><span class="kwd">const</span> <span class="cls">adrian</span> =
+                            {</span>
+                        <span class="code-line">&nbsp;&nbsp;role: <span class="str">'Full Stack Dev'</span>,</span>
+                        <span class="code-line">&nbsp;&nbsp;passion: <span class="str">'Web Development'</span>,</span>
+                        <span class="code-line">&nbsp;&nbsp;status: <span class="str">'Job Seeking'</span>,</span>
+                        <span class="code-line">&nbsp;&nbsp;skills: [<span class="str">'HTML'</span>, <span
+                                class="str">'CSS'</span>, <span class="str">'JS'</span>]</span>
+                        <span class="code-line">};</span>
+                        <br>
+                        <span class="code-line"><span class="cmt">// Ready to code!</span></span>
+                        <span class="code-line"><span class="fun">contactMe</span>(adrian);</span>
+                    </div>
+                </div>
+                <div class="floating-circle"></div>
+                <div class="floating-dots"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre-mi">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Soy <strong>Adrian Revert Escutia</strong>, estudiante de 2º de Desarrollo de Aplicaciones
+                        Multiplataforma y creador de soluciones web.
+                    </p>
+
+                    <!-- Timeline Component -->
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">2026 - Presente</span>
+                            <div class="timeline-content">
+                                <h3>Desarrollo Web & Búsqueda Activa</h3>
+                                <p>Actualmente cursando DAM mientras desarrollo webs Freelance y sigo aprendiendo nuevas
+                                    tecnologías en busca de oportunidades laborales.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">2025</span>
+                            <div class="timeline-content">
+                                <h3>Proyectos Reales & Freelance</h3>
+                                <p>Desarrollo de webs corporativas para Martinca, Vitalsport y profesionales del sector.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">2024</span>
+                            <div class="timeline-content">
+                                <h3>2º DAM + Formación Autodidacta</h3>
+                                <p>Profundizando en Java, Bases de Datos y descubriendo mi pasión por el Desarrollo
+                                    Frontend.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2º</span>
+                            <span class="stat-label">DAM</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Proyectos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Pasión</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="80" fill="var(--accent)" opacity="0.1" />
+                            <text x="100" y="110" font-size="48" fill="var(--accent)" text-anchor="middle"
+                                font-weight="600">AR</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="habilidades">
+        <div class="container">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <p class="section-subtitle">Tecnologías y herramientas que domino</p>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3>HTML5</h3>
+                    <p>Estructura semántica y accesible</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M3 9h18M9 21V9" />
+                        </svg>
+                    </div>
+                    <h3>CSS3</h3>
+                    <p>Diseños modernos y responsive</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16v16H4zM9 9l3 3-3 3M13 15h3" />
+                        </svg>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Interactividad y funcionalidad</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m5.08 5.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m5.08-5.08l4.24-4.24" />
+                        </svg>
+                    </div>
+                    <h3>Git & GitHub</h3>
+                    <p>Control de versiones</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21" />
+                            <polyline points="7.5 19.79 7.5 14.6 3 12" />
+                            <polyline points="21 12 16.5 14.6 16.5 19.79" />
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                            <line x1="12" y1="22.08" x2="12" y2="12" />
+                        </svg>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-first approach</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"></path>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Inglés</h3>
+                    <p>Nivel B2 Certificado - Comunicación fluida</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Mis Servicios</h2>
+            <p class="section-subtitle">Soluciones profesionales adaptadas a tu negocio</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Desarrollo Web & Landing Pages</h3>
+                    <p>Diseño y codificación de sitios web modernos, rápidos y optimizados para dispositivos móviles
+                        (HTML5, CSS3, JS).</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg>
+                    </div>
+                    <h3>Mantenimiento Web</h3>
+                    <p>Actualizaciones de contenido, copias de seguridad y pequeñas mejoras para que tu web esté siempre
+                        al día y segura.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Optimización & SEO</h3>
+                    <p>Mejora de rendimiento para tiempos de carga rápidos y estructura optimizada para que Google ame
+                        tu web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="proyectos">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <p class="section-subtitle">Algunos de los trabajos que he realizado</p>
+
+            <div class="projects-grid">
+                <!-- Martinca Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span>Martinca</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Martinca - Estructuras Metálicas</h3>
+                        <p>Web corporativa para empresa de construcciones metálicas. Diseño industrial moderno centrado
+                            en la exhibición de grandes estructuras.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links" style="margin-top: 1rem;">
+                            <a href="https://lightgoldenrodyellow-mandrill-304921.hostingersite.com/" target="_blank"
+                                class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Ver
+                                Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gestoría Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span>Ricart Cambra</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Gestoría & Asesoría Integral</h3>
+                        <p>Solución web profesional para despacho de asesores. Presentación clara de servicios fiscales
+                            y laborales para empresas y autónomos.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links" style="margin-top: 1rem;">
+                            <a href="https://peru-whale-386366.hostingersite.com/" target="_blank"
+                                class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Ver
+                                Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vitalsport Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span>Vitalsport</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Vitalsport - Clínica & Salud</h3>
+                        <p>Sitio web para centro de fisioterapia avanzada y salud deportiva. Diseño limpio que transmite
+                            confianza y bienestar.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links" style="margin-top: 1rem;">
+                            <a href="https://vitalsport.es" target="_blank" class="btn btn-outline"
+                                style="padding: 0.5rem 1rem; font-size: 0.9rem;">Ver Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Peiro Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span>Peiro Training</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Peiro - Entrenamiento Personal</h3>
+                        <p>Landing page dinámica para entrenador personal. Enfocada en la captación de clientes y
+                            muestra de planes de entrenamiento.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links" style="margin-top: 1rem;">
+                            <a href="https://darkslategray-squirrel-673686.hostingersite.com/" target="_blank"
+                                class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Ver
+                                Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <h2 class="section-title">¿Tienes una idea en mente?</h2>
+            <p class="section-subtitle">Ya sea una web corporativa, una landing page o un proyecto personal, estoy listo
+                para hacerlo realidad. ¡Hablemos!</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:adreescutia@gmail.com">adreescutia@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/titoadri22" target="_blank"
+                                rel="noopener noreferrer">github.com/titoadri22</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">Nombre</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="message">Mensaje</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Enviar Mensaje</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Adrian Revert Escutia. Hecho con pasión y mucho café ☕</p>
+            <div class="footer-links">
+                <a href="#inicio">Volver arriba</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
