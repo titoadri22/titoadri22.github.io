@@ -784,6 +784,21 @@ img {
     height: 100%;
 }
 
+.profile-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: var(--border-radius-full);
+    box-shadow: var(--shadow-lg);
+    border: 5px solid var(--bg-card);
+    transition: transform var(--transition-base);
+}
+
+.profile-img:hover {
+    transform: scale(1.02);
+    border-color: var(--accent);
+}
+
 /* ============================================
    Skills Section
    ============================================ */
