@@ -13,6 +13,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Force scroll to top immediately before browser restoration
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                window.scrollTo(0, 0);
+            }, 10);
+        });
+    </script>
 </head>
 
 <body>
@@ -21,11 +34,16 @@
         <div class="nav-container">
             <a href="#" class="logo">AR</a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="#inicio" class="nav-link" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link" data-i18n="nav.about">Sobre mí</a></li>
+                <li><a href="#habilidades" class="nav-link" data-i18n="nav.skills">Habilidades</a></li>
+                <li><a href="#proyectos" class="nav-link" data-i18n="nav.projects">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+                <li>
+                    <button id="langToggle" class="lang-toggle" aria-label="Cambiar idioma">
+                        <span class="lang-text">ES</span>
+                    </button>
+                </li>
                 <li>
                     <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
                         <!-- Sun Icon -->
@@ -59,15 +77,15 @@
     <section class="hero" id="inicio">
         <div class="hero-container">
             <div class="hero-content">
-                <p class="hero-greeting fade-in">Hola, soy</p>
+                <p class="hero-greeting fade-in" data-i18n="hero.greeting">Hola, soy</p>
                 <h1 class="hero-title fade-in-delay-1">Adrian Revert</h1>
-                <h2 class="hero-subtitle fade-in-delay-2">Desarrollador Web</h2>
-                <p class="hero-description fade-in-delay-3">
+                <h2 class="hero-subtitle fade-in-delay-2" data-i18n="hero.role">Desarrollador Web</h2>
+                <p class="hero-description fade-in-delay-3" data-i18n="hero.desc">
                     Estudiante de 2º DAM apasionado por crear experiencias web excepcionales.
                     Transformo ideas en realidad digital.
                 </p>
                 <div class="hero-cta fade-in-delay-4">
-                    <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#proyectos" class="btn btn-primary" data-i18n="hero.projects">Ver Proyectos</a>
                     <a href="#" class="btn btn-outline" download
                         onclick="alert('¡El CV estará disponible muy pronto! Adrian lo está puliendo ✨')">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -75,7 +93,7 @@
                             <polyline points="7 10 12 15 17 10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
                         </svg>
-                        Descargar CV
+                        <span data-i18n="hero.cv">Descargar CV</span>
                     </a>
                 </div>
             </div>
@@ -109,13 +127,40 @@
         </div>
     </section>
 
+    <!-- Infinite Tech Carousel -->
+    <div class="tech-marquee">
+        <div class="marquee-content">
+            <div class="tech-item">HTML5</div>
+            <div class="tech-item">CSS3</div>
+            <div class="tech-item">JavaScript</div>
+            <div class="tech-item">Git</div>
+            <div class="tech-item">GitHub</div>
+            <div class="tech-item">Responsive Design</div>
+            <div class="tech-item">VS Code</div>
+            <div class="tech-item">Figma</div>
+            <div class="tech-item">SQL</div>
+            <div class="tech-item">Java</div>
+            <!-- Duplicate for seamless loop -->
+            <div class="tech-item">HTML5</div>
+            <div class="tech-item">CSS3</div>
+            <div class="tech-item">JavaScript</div>
+            <div class="tech-item">Git</div>
+            <div class="tech-item">GitHub</div>
+            <div class="tech-item">Responsive Design</div>
+            <div class="tech-item">VS Code</div>
+            <div class="tech-item">Figma</div>
+            <div class="tech-item">SQL</div>
+            <div class="tech-item">Java</div>
+        </div>
+    </div>
+
     <!-- About Section -->
     <section class="about" id="sobre-mi">
         <div class="container">
-            <h2 class="section-title">Sobre mí</h2>
+            <h2 class="section-title" data-i18n="about.title">Sobre mí</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro">
+                    <p class="about-intro" data-i18n="about.intro">
                         Soy <strong>Adrian Revert Escutia</strong>, estudiante de 2º de Desarrollo de Aplicaciones
                         Multiplataforma y creador de soluciones web.
                     </p>
@@ -126,8 +171,9 @@
                             <div class="timeline-dot"></div>
                             <span class="timeline-date">2026 - Presente</span>
                             <div class="timeline-content">
-                                <h3>Desarrollo Web & Búsqueda Activa</h3>
-                                <p>Actualmente cursando DAM mientras desarrollo webs Freelance y sigo aprendiendo nuevas
+                                <h3 data-i18n="timeline.present.title">Desarrollo Web & Búsqueda Activa</h3>
+                                <p data-i18n="timeline.present.desc">Actualmente cursando DAM mientras desarrollo webs
+                                    Freelance y sigo aprendiendo nuevas
                                     tecnologías en busca de oportunidades laborales.</p>
                             </div>
                         </div>
@@ -135,8 +181,9 @@
                             <div class="timeline-dot"></div>
                             <span class="timeline-date">2025</span>
                             <div class="timeline-content">
-                                <h3>Proyectos Reales & Freelance</h3>
-                                <p>Desarrollo de webs corporativas para Martinca, Vitalsport y profesionales del sector.
+                                <h3 data-i18n="timeline.freelance.title">Proyectos Reales & Freelance</h3>
+                                <p data-i18n="timeline.freelance.desc">Desarrollo de webs corporativas para Martinca,
+                                    Vitalsport y profesionales del sector.
                                 </p>
                             </div>
                         </div>
@@ -144,27 +191,15 @@
                             <div class="timeline-dot"></div>
                             <span class="timeline-date">2024</span>
                             <div class="timeline-content">
-                                <h3>2º DAM + Formación Autodidacta</h3>
-                                <p>Profundizando en Java, Bases de Datos y descubriendo mi pasión por el Desarrollo
+                                <h3 data-i18n="timeline.dam.title">2º DAM + Formación Autodidacta</h3>
+                                <p data-i18n="timeline.dam.desc">Profundizando en Java, Bases de Datos y descubriendo mi
+                                    pasión por el Desarrollo
                                     Frontend.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">2º</span>
-                            <span class="stat-label">DAM</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">4+</span>
-                            <span class="stat-label">Proyectos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Pasión</span>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="about-image">
                     <img src="images/profile.png" alt="Adrian Revert" class="profile-img">
@@ -176,8 +211,8 @@
     <!-- Skills Section -->
     <section class="skills" id="habilidades">
         <div class="container">
-            <h2 class="section-title">Habilidades Técnicas</h2>
-            <p class="section-subtitle">Tecnologías y herramientas que domino</p>
+            <h2 class="section-title" data-i18n="skills.title">Habilidades Técnicas</h2>
+            <p class="section-subtitle" data-i18n="skills.subtitle">Tecnologías y herramientas que domino</p>
 
             <div class="skills-grid">
                 <div class="skill-card">
@@ -187,7 +222,7 @@
                         </svg>
                     </div>
                     <h3>HTML5</h3>
-                    <p>Estructura semántica y accesible</p>
+                    <p data-i18n="skills.html">Estructura semántica y accesible</p>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 90%"></div>
                     </div>
@@ -201,7 +236,7 @@
                         </svg>
                     </div>
                     <h3>CSS3</h3>
-                    <p>Diseños modernos y responsive</p>
+                    <p data-i18n="skills.css">Diseños modernos y responsive</p>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 85%"></div>
                     </div>
@@ -214,7 +249,7 @@
                         </svg>
                     </div>
                     <h3>JavaScript</h3>
-                    <p>Interactividad y funcionalidad</p>
+                    <p data-i18n="skills.js">Interactividad y funcionalidad</p>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 75%"></div>
                     </div>
@@ -229,7 +264,7 @@
                         </svg>
                     </div>
                     <h3>Git & GitHub</h3>
-                    <p>Control de versiones</p>
+                    <p data-i18n="skills.git">Control de versiones</p>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 80%"></div>
                     </div>
@@ -248,7 +283,7 @@
                         </svg>
                     </div>
                     <h3>Responsive Design</h3>
-                    <p>Mobile-first approach</p>
+                    <p data-i18n="skills.responsive">Mobile-first approach</p>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 85%"></div>
                     </div>
@@ -265,7 +300,7 @@
                         </svg>
                     </div>
                     <h3>Inglés</h3>
-                    <p>Nivel B2 Certificado - Comunicación fluida</p>
+                    <p data-i18n="skills.english">Nivel B2 Certificado - Comunicación fluida</p>
                     <div class="skill-bar">
                         <div class="skill-progress" style="width: 75%"></div>
                     </div>
@@ -279,8 +314,9 @@
     <!-- Services Section -->
     <section class="services" id="servicios">
         <div class="container">
-            <h2 class="section-title">Mis Servicios</h2>
-            <p class="section-subtitle">Soluciones profesionales adaptadas a tu negocio</p>
+            <h2 class="section-title" data-i18n="services.title">Mis Servicios</h2>
+            <p class="section-subtitle" data-i18n="services.subtitle">Soluciones profesionales adaptadas a tu negocio
+            </p>
 
             <div class="services-grid">
                 <div class="service-card">
@@ -292,7 +328,8 @@
                         </svg>
                     </div>
                     <h3>Desarrollo Web & Landing Pages</h3>
-                    <p>Diseño y codificación de sitios web modernos, rápidos y optimizados para dispositivos móviles
+                    <p data-i18n="services.web.desc">Diseño y codificación de sitios web modernos, rápidos y optimizados
+                        para dispositivos móviles
                         (HTML5, CSS3, JS).</p>
                 </div>
 
@@ -304,7 +341,8 @@
                         </svg>
                     </div>
                     <h3>Mantenimiento Web</h3>
-                    <p>Actualizaciones de contenido, copias de seguridad y pequeñas mejoras para que tu web esté siempre
+                    <p data-i18n="services.maint.desc">Actualizaciones de contenido, copias de seguridad y pequeñas
+                        mejoras para que tu web esté siempre
                         al día y segura.</p>
                 </div>
 
@@ -316,7 +354,8 @@
                         </svg>
                     </div>
                     <h3>Optimización & SEO</h3>
-                    <p>Mejora de rendimiento para tiempos de carga rápidos y estructura optimizada para que Google ame
+                    <p data-i18n="services.seo.desc">Mejora de rendimiento para tiempos de carga rápidos y estructura
+                        optimizada para que Google ame
                         tu web.</p>
                 </div>
             </div>
@@ -433,8 +472,9 @@
     <!-- Contact Section -->
     <section class="contact" id="contacto">
         <div class="container">
-            <h2 class="section-title">¿Tienes una idea en mente?</h2>
-            <p class="section-subtitle">Ya sea una web corporativa, una landing page o un proyecto personal, estoy listo
+            <h2 class="section-title" data-i18n="contact.title">¿Tienes una idea en mente?</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">Ya sea una web corporativa, una landing page o un
+                proyecto personal, estoy listo
                 para hacerlo realidad. ¡Hablemos!</p>
 
             <div class="contact-content">
@@ -472,21 +512,21 @@
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder=" " required>
-                        <label for="name">Nombre</label>
+                        <label for="name" data-i18n="contact.form.name">Nombre</label>
                     </div>
 
                     <div class="form-group">
                         <input type="email" id="email" name="email" placeholder=" " required>
-                        <label for="email">Email</label>
+                        <label for="email" data-i18n="contact.form.email">Email</label>
                     </div>
 
                     <div class="form-group">
                         <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
-                        <label for="message">Mensaje</label>
+                        <label for="message" data-i18n="contact.form.message">Mensaje</label>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-full">
-                        <span>Enviar Mensaje</span>
+                        <span data-i18n="contact.send">Enviar Mensaje</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="22" y1="2" x2="11" y2="13" />
                             <polygon points="22 2 15 22 11 13 2 9 22 2" />
@@ -500,9 +540,9 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Adrian Revert Escutia. Hecho con pasión y mucho café ☕</p>
+            <p data-i18n="footer.text">&copy; 2026 Adrian Revert Escutia. Hecho con pasión y mucho café ☕</p>
             <div class="footer-links">
-                <a href="#inicio">Volver arriba</a>
+                <a href="#inicio" data-i18n="footer.back">Volver arriba</a>
             </div>
         </div>
     </footer>
