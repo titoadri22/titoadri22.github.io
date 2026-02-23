@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a40" />
+      <stop offset="100%" stop-color="#12121c" />
+    </linearGradient>
+    
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(99, 102, 241, 0.4)" />
+      <stop offset="100%" stop-color="rgba(99, 102, 241, 0.1)" />
+    </linearGradient>
+
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glass">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur2"/>
+      <feColorMatrix in="blur2" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow2"/>
+      <feBlend in="SourceGraphic" in2="glow2" mode="normal"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" rx="20" fill="url(#bgGrad)" />
+
+  <!-- Glassmorphism Card -->
+  <g transform="translate(60, 50)" filter="url(#glass)">
+    <rect width="280" height="200" rx="24" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+    
+    <!-- Abstract Wallet Shape -->
+    <path d="M40 70 C40 50, 60 50, 60 50 L140 50 C160 50, 160 70, 160 70 L160 130 C160 150, 140 150, 140 150 L60 150 C40 150, 40 130, 40 130 Z" 
+          fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+    
+    <!-- Wallet Flap -->
+    <path d="M140 50 Q170 100 140 150 L160 150 Q200 100 160 50 Z" fill="url(#primaryGrad)" filter="url(#glow)"/>
+
+    <!-- Rising Chart Line -->
+    <path d="M70 140 L110 100 L140 120 L190 60 L230 40 L240 50" 
+          fill="none" stroke="url(#accentGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+    
+    <!-- Arrow Head -->
+    <polygon points="215,35 245,35 235,65" fill="#34d399" filter="url(#glow)"/>
+
+    <!-- Data Bars -->
+    <rect x="70" y="160" width="12" height="20" rx="6" fill="#4f46e5" opacity="0.6" />
+    <rect x="95" y="145" width="12" height="35" rx="6" fill="#818cf8" opacity="0.8" />
+    <rect x="120" y="130" width="12" height="50" rx="6" fill="#10b981" />
+    <rect x="145" y="110" width="12" height="70" rx="6" fill="#34d399" filter="url(#glow)"/>
+    
+    <circle cx="210" cy="140" r="30" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="6"/>
+    <path d="M210 110 A30 30 0 0 1 240 140" fill="none" stroke="url(#primaryGrad)" stroke-width="6" stroke-linecap="round"/>
+
+  </g>
+  
+  <text x="50%" y="275" font-family="'Inter', -apple-system, sans-serif" font-weight="700" font-size="20" fill="#ffffff" text-anchor="middle" letter-spacing="2">TAITOU FINANCES</text>
+</svg>
